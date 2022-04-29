@@ -1,9 +1,11 @@
 <template>
   <!-- <header-component></header-component> -->
-  <page-header></page-header>
-  <div :opened-menu="shadowWindow" class="container">
-    <base-info></base-info>
-    <about-me></about-me>
+  <page-header @opened-menu="shadowWindow"></page-header>
+  <div :class="{ shadow: menuIsOpen }">
+    <div class="container">
+      <base-info></base-info>
+      <about-me></about-me>
+    </div>
   </div>
   <page-footer></page-footer>
 </template>
@@ -29,4 +31,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.shadow {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+</style>

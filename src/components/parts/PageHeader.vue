@@ -46,14 +46,14 @@ export default {
 
 <style scoped>
 img {
-  height: 60px;
+  height: 30px;
   padding: 5px 20px;
 }
 
 label {
   position: relative;
   top: -1px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
