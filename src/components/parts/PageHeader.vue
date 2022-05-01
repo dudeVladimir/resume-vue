@@ -10,19 +10,26 @@
         <label for="menu-img">Меню</label>
       </div>
       <div class="menu-btn-block">
-        <button class="btn menu-btn">Общая информация</button>
-        <button class="btn menu-btn">Портфолио</button>
-        <button class="btn menu-btn">Навыки</button>
-        <button class="btn menu-btn">GitHub</button>
+        <router-link to="/home" class="menu-a">Общая информация</router-link>
+        <router-link to="/portfolio" class="menu-a">Портфолио</router-link>
+        <router-link to="/skills" class="menu-a">Навыки</router-link>
+        <a
+          href="https://github.com/dudeVladimir"
+          class="menu-a"
+          target="__blank"
+          >GitHub</a
+        >
       </div>
     </div>
   </div>
   <div id="page-header">
     <div class="container page-header">
-      <button class="btn">Общая информация</button>
-      <button class="btn">Портфолио</button>
-      <button class="btn">Навыки</button>
-      <button class="btn">GitHub</button>
+      <router-link to="/home" class="menu-a">Общая информация</router-link>
+      <router-link to="/portfolio" class="menu-a">Портфолио</router-link>
+      <router-link to="/skills" class="menu-a">Навыки</router-link>
+      <a href="https://github.com/dudeVladimir" class="menu-a" target="__blank"
+        >GitHub</a
+      >
     </div>
   </div>
 </template>
