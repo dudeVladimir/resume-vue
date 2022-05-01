@@ -10,9 +10,15 @@
         <label for="menu-img">Меню</label>
       </div>
       <div class="menu-btn-block">
-        <router-link to="/home" class="menu-a">Общая информация</router-link>
-        <router-link to="/portfolio" class="menu-a">Портфолио</router-link>
-        <router-link to="/skills" class="menu-a">Навыки</router-link>
+        <router-link to="/home" class="menu-a" @click="menu"
+          >Общая информация</router-link
+        >
+        <router-link to="/portfolio" class="menu-a" @click="menu"
+          >Портфолио</router-link
+        >
+        <router-link to="/skills" class="menu-a" @click="menu"
+          >Навыки</router-link
+        >
         <a
           href="https://github.com/dudeVladimir"
           class="menu-a"

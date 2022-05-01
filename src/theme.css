@@ -221,13 +221,17 @@ header > div {
   }
 
   .menu-a {
-    padding: 10px 0;
+    margin: 10px 0;
     font-size: 1.5rem;
   }
 }
 
 @media (min-width: 910px) {
   #mobile-header {
+    display: none;
+  }
+
+  .modal-backdrop {
     display: none;
   }
 }
@@ -241,5 +245,9 @@ header > div {
   .base-info > .card {
     margin-top: 10px;
     width: 100%;
+  }
+
+  #base-info-contacts {
+    margin-bottom: 10px;
   }
 }

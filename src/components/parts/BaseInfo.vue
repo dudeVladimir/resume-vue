@@ -6,7 +6,7 @@
         <h2>Frontend developer</h2>
         <h1>Дудкин Владимир Сергеевич</h1>
       </div>
-      <div>
+      <div id="base-info-contacts">
         <h2>Контакты</h2>
         <button class="btn">VK</button>
         <button class="btn">Telegram</button>
