@@ -63,6 +63,10 @@ img {
   padding: 5px 20px;
 }
 
+#menu-img {
+  width: 60px;
+}
+
 label {
   position: relative;
   top: -1px;

@@ -7,10 +7,20 @@
         <h1>Дудкин Владимир Сергеевич</h1>
       </div>
       <div id="base-info-contacts">
-        <h2>Контакты</h2>
-        <button class="btn">VK</button>
-        <button class="btn">Telegram</button>
-        <button class="btn">GitHub</button>
+        <h2>Социальные сети</h2>
+        <a href="https://vk.com/dude.vladimir" target="_blank" class="a-img">
+          <img class="social-img" src="../../assets/img/vk.png" alt="Фото" />
+        </a>
+        <a href="https://t.me/DudeVladimir" target="_blank" class="a-img">
+          <img class="social-img" src="../../assets/img/teleg.png" alt="Фото" />
+        </a>
+        <a href="https://github.com/dudeVladimir" target="_blank" class="a-img">
+          <img
+            class="social-img"
+            src="../../assets/img/github.png"
+            alt="Фото"
+          />
+        </a>
       </div>
     </div>
   </div>
@@ -32,7 +42,26 @@ img {
   border-radius: 50%;
 }
 
-button {
+.a-img {
   margin: 0 5px;
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.social-img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.social-img:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  margin: 0;
 }
 </style>

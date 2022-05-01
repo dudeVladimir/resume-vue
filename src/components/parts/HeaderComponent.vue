@@ -1,8 +1,15 @@
 <template>
-  <header>
+  <header v-if="headerIsActive">
     <div class="container">
-      <div class="header-block">{{ text }}</div>
-      <button class="btn">Попустить</button>
+      <div class="header-block">{{ texts[indexOfText] }}</div>
+      <button
+        class="btn"
+        v-if="indexOfText <= texts.length - 2"
+        @click="indexCounter"
+      >
+        Дальше
+      </button>
+      <button class="btn" v-else @click="close">Закрыть</button>
     </div>
   </header>
 </template>
@@ -11,17 +18,41 @@
 export default {
   data() {
     return {
+      indexOfText: 0,
       text: '',
       texts: [
         'Привет!',
-        'Здесь представлена основная информация обо мне',
+        'Меня зовут Владимир',
+        'Здесь представлена',
+        'Основная информация обо мне',
         'Все социальные сети',
-        'Навыки и их практическое применение',
+        'Практическое применение моих навыков',
       ],
+      headerIsActive: true,
     }
   },
-  methods: {},
+  methods: {
+    close() {
+      this.headerIsActive = false
+      localStorage.setItem('visited', true)
+      this.indexOfText = 0
+    },
+    indexCounter() {
+      if (this.indexOfText <= this.texts.length - 1) {
+        this.indexOfText++
+      } else {
+        this.indexOfText = 0
+      }
+    },
+  },
   computed: {},
+  mounted() {
+    if (localStorage.visited) {
+      this.headerIsActive = false
+    } else {
+      this.headerIsActive = true
+    }
+  },
 }
 </script>
 

@@ -35,16 +35,17 @@ h6 {
 
 header {
   background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
   position: fixed;
   height: 100%;
   width: 100%;
+  z-index: 10000;
 }
 
 footer {
   width: 100%;
   background-color: #33394e;
   padding: 10px 0;
-  margin-top: 10px;
   font-size: 12px;
 }
 
@@ -73,7 +74,20 @@ header > div {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0);
+  opacity: 0;
+  transition: 0.25s;
+  animation: show-backdrop 0.25s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-backdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.35;
+  }
 }
 
 .footer-a {
@@ -121,6 +135,7 @@ header > div {
 }
 
 .header-block {
+  text-align: center;
   background-color: #33394e;
   height: 50%;
   width: 70%;
@@ -167,6 +182,7 @@ header > div {
   padding: 5px 10px;
   background-color: #33394e;
   border-radius: 10px;
+  margin: 10px 10px;
 }
 
 #page-header {

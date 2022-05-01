@@ -11,10 +11,20 @@
         <h3>Контакты</h3>
         <div>
           <span>dude.vladimir@mail.ru</span>
-          <a class="footer-a" href="https://t.me/DudeVladimir">Telegram</a>
+          <a class="footer-a" href="https://t.me/DudeVladimir" target="_blank"
+            >Telegram</a
+          >
           <div id="vk-git">
-            <a class="footer-a" href="https://vk.com/dude.vladimir">VK</a>
-            <a class="footer-a" href="https://github.com/dudeVladimir"
+            <a
+              class="footer-a"
+              href="https://vk.com/dude.vladimir"
+              target="_blank"
+              >VK</a
+            >
+            <a
+              class="footer-a"
+              href="https://github.com/dudeVladimir"
+              target="_blank"
               >GitHub</a
             >
           </div>

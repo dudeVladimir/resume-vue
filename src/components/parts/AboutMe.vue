@@ -30,6 +30,7 @@ export default {}
 .card {
   width: 100%;
   line-height: 2rem;
+  margin: 0;
   margin-bottom: 10px;
 }
 

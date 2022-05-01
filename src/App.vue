@@ -1,8 +1,8 @@
 <template>
-  <!-- <header-component></header-component> -->
+  <header-component></header-component>
   <page-header @opened-menu="backdrop"></page-header>
   <div :class="{ 'modal-backdrop': backdropIsEnabled }"></div>
-  <div class="container">
+  <div class="container" id="main">
     <router-view></router-view>
   </div>
   <page-footer></page-footer>
@@ -11,7 +11,7 @@
 <script>
 import PageFooter from './components/parts/PageFooter.vue'
 import PageHeader from './components/parts/PageHeader.vue'
-// import HeaderComponent from './components/parts/HeaderComponent.vue'
+import HeaderComponent from './components/parts/HeaderComponent.vue'
 
 export default {
   data() {
@@ -24,7 +24,7 @@ export default {
       this.backdropIsEnabled = menuIsOpen
     },
   },
-  components: { PageHeader, PageFooter },
+  components: { PageHeader, PageFooter, HeaderComponent },
 }
 </script>
 
