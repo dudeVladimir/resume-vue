@@ -1,57 +1,46 @@
 <template>
-  <header v-if="headerIsActive">
+  <header v-if="$store.state.headerModule.headerIsActive">
     <div class="container">
-      <div class="header-block">{{ texts[indexOfText] }}</div>
+      <div class="header-block">
+        {{
+          $store.state.headerModule.texts[$store.state.headerModule.indexOfText]
+        }}
+        <small>Реализованно через Vuex</small>
+      </div>
       <button
         class="btn"
-        v-if="indexOfText <= texts.length - 2"
-        @click="indexCounter"
+        v-if="
+          $store.state.headerModule.indexOfText <=
+          $store.state.headerModule.texts.length - 2
+        "
+        @click="next"
       >
         Дальше
       </button>
-      <button class="btn" v-else @click="close">Закрыть</button>
+      <button class="btn" v-else @click="closeModal">Закрыть</button>
     </div>
   </header>
 </template>
 
 <script>
+import { mapMutations, mapActions } from 'vuex'
+
 export default {
-  data() {
-    return {
-      indexOfText: 0,
-      text: '',
-      texts: [
-        'Привет!',
-        'Меня зовут Владимир',
-        'Здесь представлена',
-        'Основная информация обо мне',
-        'Все социальные сети',
-        'Практическое применение моих навыков',
-      ],
-      headerIsActive: true,
-    }
-  },
   methods: {
-    close() {
-      this.headerIsActive = false
-      localStorage.setItem('visited', true)
-      this.indexOfText = 0
-    },
-    indexCounter() {
-      if (this.indexOfText <= this.texts.length - 1) {
-        this.indexOfText++
-      } else {
-        this.indexOfText = 0
-      }
-    },
+    ...mapMutations({
+      next: 'headerModule/indexCounter',
+      closeModal: 'headerModule/close',
+    }),
+
+    ...mapActions({ nextAsync: 'headerModule/indexCounterAsync' }),
   },
-  computed: {},
   mounted() {
     if (localStorage.visited) {
-      this.headerIsActive = false
+      this.$store.state.headerModule.headerIsActive = false
     } else {
-      this.headerIsActive = true
+      this.$store.state.headerModule.headerIsActive = true
     }
+    this.nextAsync(this.$store.state.headerModule.texts.length - 1)
   },
 }
 </script>
