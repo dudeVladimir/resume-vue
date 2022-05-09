@@ -16,11 +16,6 @@ export default {
       headerIsActive: true,
     }
   },
-  // getters: {
-  //   lengthOfTexts(state) {
-  //     return state.texts.length
-  //   },
-  // },
   mutations: {
     close(state) {
       state.headerIsActive = false

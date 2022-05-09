@@ -1,7 +1,7 @@
 <template>
   <header-component></header-component>
   <page-header @opened-menu="backdrop"></page-header>
-  <div :class="{ 'modal-backdrop': backdropIsEnabled }"></div>
+  <div class="modal-backdrop" v-if="backdropIsEnabled"></div>
   <div class="container" id="main">
     <router-view></router-view>
   </div>
