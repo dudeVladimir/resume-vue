@@ -21,7 +21,7 @@ export default {
         },
         {
           title: 'Резюме',
-          github: 'https://github.com/dudeVladimir/todo-list',
+          github: 'https://github.com/dudeVladimir/resume-vue',
           description: 'Ссылочка на само резюме в GitHub',
           img: 'resume.jpg',
         },
