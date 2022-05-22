@@ -61,6 +61,10 @@ img {
   transform: scale(1.1);
 }
 
+.social-img:active {
+  opacity: 0.7;
+}
+
 .card {
   margin: 0;
 }

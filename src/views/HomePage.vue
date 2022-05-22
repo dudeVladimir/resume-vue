@@ -1,15 +1,17 @@
 <template>
   <div :class="{ shadow: menuIsOpen }">
     <base-info></base-info>
+    <skills-card></skills-card>
     <about-me></about-me>
+    <feedback-form></feedback-form>
   </div>
 </template>
 
 <script>
-import PageFooter from '../components/parts/PageFooter.vue'
-import PageHeader from '../components/parts/PageHeader.vue'
 import BaseInfo from '../components/parts/BaseInfo.vue'
 import AboutMe from '../components/parts/AboutMe.vue'
+import FeedbackForm from '../components/parts/FeedbackForm.vue'
+import SkillsCard from '@/components/parts/SkillsCard.vue'
 
 export default {
   data() {
@@ -21,7 +23,7 @@ export default {
       console.log(isOpen)
     },
   },
-  components: { PageFooter, PageHeader, BaseInfo, AboutMe },
+  components: { BaseInfo, AboutMe, FeedbackForm, SkillsCard },
 }
 </script>
 

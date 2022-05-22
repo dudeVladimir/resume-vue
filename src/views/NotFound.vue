@@ -1,9 +1,10 @@
 <template>
   <div class="card">
     <h1>Такой страницы не существует :(</h1>
-    <router-link to="/home"
-      ><button class="btn">Вернуться на главную</button></router-link
-    >
+
+    <button class="btn" @click="$router.push('/home')">
+      Вернуться на главную
+    </button>
   </div>
 </template>
 
@@ -11,4 +12,8 @@
 export default {}
 </script>
 
-<style></style>
+<style scoped>
+.card {
+  align-items: center;
+}
+</style>
