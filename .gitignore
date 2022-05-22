@@ -21,5 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-src\assets
+.firebaserc
+firebase.json
+.firebase
