@@ -4,6 +4,13 @@ export default {
     return {
       portfolio: [
         {
+          title: 'Онлайн-магазин',
+          url: 'https://online-store-vue.web.app/',
+          github: 'https://github.com/dudeVladimir/online-store',
+          description: `Онлайн магазин с фильтрами по категориям, созданием и сохранением заказов в БД, регистрацией пользователей. Vue 3 Composition API, Vuex, Vue Router, Scss, Axios, FakeStoreAPI.`,
+          img: 'online-store.jpg',
+        },
+        {
           title: 'Заметки',
           url: 'https://note-list-bem-vue.web.app/auth',
           github: 'https://github.com/dudeVladimir/black-notepad/',
@@ -20,9 +27,16 @@ export default {
           img: 'todo.jpg',
         },
         {
+          title: 'Cute Cats',
+          url: 'https://vue-cat.web.app/',
+          github: 'https://github.com/dudeVladimir/cats',
+          description: 'Посмотреть и полайкать котов :)',
+          img: 'cats.jpg',
+        },
+        {
           title: 'Резюме',
           github: 'https://github.com/dudeVladimir/resume-vue',
-          description: 'Ссылочка на само резюме в GitHub',
+          description: 'Ссылка на само резюме в GitHub',
           img: 'resume.jpg',
         },
       ],
